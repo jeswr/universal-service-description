@@ -1,0 +1,1 @@
+This is a placeholder spot to create a paper for publishing the findings of creating this ontology.
