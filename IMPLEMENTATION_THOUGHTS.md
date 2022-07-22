@@ -10,4 +10,8 @@ There are a few options around exposing a service instance that need to be discu
 
 TODO: Read up on the Web Linking RFC in relation to this point https://datatracker.ietf.org/doc/html/rfc5988
 Service description is even mentioned within this document (https://datatracker.ietf.org/doc/html/rfc5988#section-4)
-TODO: Read up on the Atom Publishing Protocol https://datatracker.ietf.org/doc/html/rfc5023 which seems fairly similar to what is trying to be achieved here.
+[x] Didn't seem useful at all after reading - TODO: Read up on the Atom Publishing Protocol https://datatracker.ietf.org/doc/html/rfc5023 which seems fairly similar to what is trying to be achieved here.
+
+In order to effectively, and securely achieve phase (which is declaratively describing endpoint customisations so that a client can adjust) we should probably look to the function ontologies that were being researched in the last couple of ISWCs
+
+

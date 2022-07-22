@@ -1,0 +1,47 @@
+srvc:Service a owl:Class ;
+  rdfs:label "A service provided by an endpoint" .
+
+### Used to specify the types of (operations? - probably need a more generic word here)
+### that an endpoint supports,
+srvc:supports a owl:Property .
+
+### See if we want to have the concept of 'except'; e.g. supports SPARQL 1.2 *except* service x
+
+### What this doesn't capture
+### Endpoints that expose a subset (e.g. timeseries endpoint) or superset (e.g. aggregator) of the data
+srvc:Alt a owl:Class ;
+  rdfs:label "A link to an alternative service" .
+
+srvc:alt a owl:Property ;
+  rdfs:label "A link to an alternative service" .
+
+### Perhaps we also introduce the concept of related endpoints that offer some overlap in services
+### but do not provide the same service in order to further support discovery.
+srvc:rel
+
+### What might be needed is the concept of a "transformation" associated with an alternative endpoint
+### i.e. if you want to run a query against a profile doc, that is equivalent to doing the same against
+### an aggregator (*but* you need parameterise to the aggragator the specific data you are interested in)
+
+### Another question is how specific do we go with toggles.
+### Do we have specific semantics for URL parameters for instance?
+
+### Trying to think of how SPARQL would be defined
+
+
+### The more I think about it, the more it seems like this ontology will need 2 key things
+### 1. Semantic Declarations (what an endpoint can do)
+### 2. Syntactic Declarations (how to invoke those things in the endpoint)
+###
+### If there is a spec on how to invoke a particular Semantic declaration, then the syntactic
+### declaration may not be required. However, if there *is not* a spec then the syntactic
+### declarations will be required so that agents can agree on the way to do things.
+
+### We should also probably try to include more variable info in this ontology where
+### possible in order to better support things like query planning and optimisation.
+### This can include things like the latency and current effects of server load. This
+### can also mean that agents can automatically distribute their requests across different servers
+### and switch from using server side SPARQL, to a more QPF style pattern of usage 
+
+### Another option is to use the templating apporach like that seen in the sparql/shacl extensions
+
